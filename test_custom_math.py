@@ -3,11 +3,11 @@ import custom_math
 
 class TestCustomMath(unittest.TestCase):
 
-    # Sarcina 1
+    
     def test_sum(self):
         self.assertEqual(custom_math.sum(1, 3), 4)
 
-    # Sarcina 2
+    
     def test_division_valid(self):
         self.assertEqual(custom_math.division(10, 2), 5)
 
@@ -15,7 +15,7 @@ class TestCustomMath(unittest.TestCase):
         with self.assertRaises(ValueError):
             custom_math.division(5, 0)
 
-    # Sarcina 3
+
     def test_sum_multiple(self):
         test_values = [
             (1, 1, 2),
@@ -36,7 +36,6 @@ class TestCustomMath(unittest.TestCase):
         for x, y, expected in test_values:
             self.assertEqual(custom_math.division(x, y), expected)
 
-    # Sarcina 4
     def test_positive_result(self):
         result = custom_math.sum(5, 5)
         self.assertTrue(result > 0)
